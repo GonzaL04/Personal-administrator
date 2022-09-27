@@ -1,0 +1,12 @@
+input {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--color-primary);
+    padding: 7px;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    padding: 10px;
+}

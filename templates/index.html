@@ -1,0 +1,11 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Home {% endblock %}
+
+{% block 'content' %}
+    <h1>Welcome to your personal manager</h1>
+    <div class="cards">
+        <a href="{% url 'contact' %}" class="card">CONTACTS</a>
+        <a href="{% url 'todo' %}" class="card">TASKS</a>
+    </div>
+{% endblock %}

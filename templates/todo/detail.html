@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Task {{ todo.title }} {% endblock %}
+
+{% block 'content' %}
+<span class="btn-aux"><a href="{% url 'todo' %}"> Back </a></span>
+<ul class="list">
+    <li><b>Title: </b> {{ todo.title }} </li>
+    <li><b>Description: </b> {{ todo.description }} </li>
+    <li><b>Date: </b> {{ todo.date }} </li>
+    <li><b>Estimated date: </b> {{ todo.estimated_end }} </li>
+    <li><b>Priority (1..5): </b> {{ todo_pririty }} </li>
+</ul>
+{% endblock %}

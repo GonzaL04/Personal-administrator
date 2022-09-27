@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Create task {% endblock %}
+
+{% block 'styles.css' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+
+<span class="btn-aux"><a href="{% url 'todo' %}">Back</a></span>
+<form action="{% url 'todo_create' %}" method='POST'>
+    {% csrf_token %}
+    <table
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Send" class="btn"> 
+</form>
+
+{% endblock %}
